@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+  stages {
+    stage('run collection') {
+      steps {
+        sh 'newman run -h'
+        sh 'newman run HelloWorld.postman_collection.json'
+      }
+    }
+  }
+}
